@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>新加坡自由行 · 參考地點</name>
+    <description>與 singapore.html 動線對應之參考座標（約略）；導航請以現場為準。</description>
+    <Style id="poi"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/blu-circle.png</href></Icon></IconStyle></Style>
+
+    <Placemark><name>新加坡禧街鉑爾曼飯店</name><description>岸上住宿起點</description><styleUrl>#poi</styleUrl><Point><coordinates>103.84953,1.29104,0</coordinates></Point></Placemark>
+    <Placemark><name>City Hall 地鐵站</name><description>轉往烏節／武吉士</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8516,1.2922,0</coordinates></Point></Placemark>
+    <Placemark><name>樟宜機場（概略）</name><description>入境／接機</description><styleUrl>#poi</styleUrl><Point><coordinates>103.9894,1.3612,0</coordinates></Point></Placemark>
+    <Placemark><name>舊禧街警察局</name><description>彩色窗立面</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8490,1.2905,0</coordinates></Point></Placemark>
+    <Placemark><name>ION Orchard</name><description>烏節路方案 A</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8320,1.3040,0</coordinates></Point></Placemark>
+    <Placemark><name>武吉士 Bugis Junction</name><description>方案 B</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8555,1.2985,0</coordinates></Point></Placemark>
+    <Placemark><name>哈芝巷 Haji Lane</name><description>巷弄拍照</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8597,1.3009,0</coordinates></Point></Placemark>
+    <Placemark><name>魚尾獅公園</name><description>傍晚拍照</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8545,1.2869,0</coordinates></Point></Placemark>
+    <Placemark><name>濱海灣金沙 MBS</name><description>外觀／河畔</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8607,1.2835,0</coordinates></Point></Placemark>
+    <Placemark><name>螺旋橋 Helix Bridge</name><description>步行動線</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8643,1.2872,0</coordinates></Point></Placemark>
+    <Placemark><name>老巴剎 Lau Pa Sat</name><description>熟食中心</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8510,1.2804,0</coordinates></Point></Placemark>
+    <Placemark><name>克拉碼頭 Clarke Quay</name><description>河畔餐飲</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8462,1.2900,0</coordinates></Point></Placemark>
+    <Placemark><name>濱海灣花園（擎天樹區）</name><description>可選夜景</description><styleUrl>#poi</styleUrl><Point><coordinates>103.8633,1.2820,0</coordinates></Point></Placemark>
+  </Document>
+</kml>
