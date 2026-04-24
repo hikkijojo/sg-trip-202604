@@ -394,6 +394,23 @@ table.simple th {
   font-family: var(--font);
   background: var(--surface);
 }
+
+/* Google 我的地圖嵌入 */
+.my-maps-embed {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+.my-maps-embed iframe {
+  display: block;
+  width: 100%;
+  height: min(72vh, 620px);
+  border: 0;
+}
 .map-toolbar {
   display: flex;
   flex-wrap: wrap;

@@ -8,7 +8,7 @@
 - **靜態網頁（手機優先、多頁）**
   - `index.html`：首屏 **班機／專車／飯店** 三卡＋其餘入口。
   - `singapore.html`：**新加坡自由行** 詳頁（Google 地圖、維基圖片與延伸閱讀）。
-  - `map.html`：**地圖一覽**（與自由行頁相同地點；互動地圖 + **Google 地圖「多站」連結**；KML 供下載或「我的地圖」匯入）。Google 已多半不支援 `maps?q=外部KML` 直開。
+  - `map.html`：**地圖一覽**（嵌入 Google「我的地圖」`embed?mid=…`；站內 `singapore-pois.kml` 僅備份下載）。若更換地圖，請改 `map.html` 內之 `mid` 與連結。
   - **`.nojekyll`**：讓 GitHub Pages 以純靜態方式提供檔案（避免 Jekyll 處理）。
   - `order.html`、`timeline.html`、`cruise.html`、`checklist.html`、`links.html`：摘要頁。
 - **`assets/app.css`**：共用樣式。

@@ -4,10 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0b1220" />
-    <meta name="description" content="新加坡自由行參考地點一覽：Google 地圖多站與互動地圖" />
+    <meta name="description" content="新加坡自由行：Google 我的地圖一覽" />
     <title>地圖一覽 · 新加坡自由行</title>
     <link rel="stylesheet" href="./assets/app.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.css" crossorigin="anonymous" />
     <link rel="manifest" href="./manifest.json" />
     <link rel="icon" href="./assets/icon.svg" type="image/svg+xml" />
   </head>
@@ -29,115 +28,55 @@
     </header>
 
     <main>
-      <h1 class="page-title">地圖一覽（新加坡自由行）</h1>
+      <h1 class="page-title">地圖一覽（Google 我的地圖）</h1>
       <p class="lead">
-        與「新加坡自由行」頁所列地點對應。下方互動地圖為 <strong>OpenStreetMap</strong>（與座標一致）。若要改用
-        <strong>Google 地圖</strong>，請優先使用<strong>「在 Google 地圖開啟（多站）」</strong>：Google 近年已<strong>不再可靠支援</strong>
-        <code>maps?q=網址.kml</code> 這種外部 KML 直連，與檔案是否在 GitHub Pages 無關。
+        嵌入你已建立並分享的
+        <strong>「新加坡飯店附近半日景點」</strong>（
+        <a
+          href="https://www.google.com/maps/d/edit?mid=1lL3qdmf4UXi1P9cRLF7yjPcPuzd3kZs&amp;usp=sharing"
+          target="_blank"
+          rel="noopener"
+          >在 Google 開啟</a
+        >）。之後若增刪地點，只要在 Google「我的地圖」裡編輯，本頁嵌入會一併更新（無須改網站程式）。若嵌入無法顯示，請用下方「全畫面檢視」。
       </p>
-
-      <div class="callout">
-        <strong>建議用法（由穩到備援）：</strong><br />
-        ① <strong>在 Google 地圖開啟（多站）</strong>：以座標建立多站路線，網頁／App 會顯示<strong>全部停靠點</strong>（可能畫出建議路線，可忽略）。<br />
-        ② <strong>下載 KML</strong> 後，到
-        <a href="https://www.google.com/maps/d/u/0/" target="_blank" rel="noopener">Google 我的地圖</a>
-        →「建立地圖」→「匯入」→ 選檔，可得到<strong>可編輯、可分享</strong>的圖層（最適合長期維護）。<br />
-        ③ 若仍想試舊版「網址開 KML」，可用下方「嘗試外部 KML」；多數手機／瀏覽器<strong>已無法</strong>載入。
-      </div>
 
       <div class="map-toolbar">
-        <a id="open-google-dir" class="btn" href="#" target="_blank" rel="noopener">在 Google 地圖開啟（多站）</a>
-        <a id="download-kml" class="btn btn--secondary" href="./assets/singapore-pois.kml" download="singapore-pois.kml"
-          >下載 KML</a
+        <a
+          class="btn"
+          href="https://www.google.com/maps/d/u/0/viewer?mid=1lL3qdmf4UXi1P9cRLF7yjPcPuzd3kZs&amp;hl=zh-TW"
+          target="_blank"
+          rel="noopener"
+          >全畫面檢視（Google）</a
         >
-        <a id="open-google-kml" class="btn btn--secondary" href="#" target="_blank" rel="noopener">嘗試外部 KML（舊版）</a>
+        <a
+          class="btn btn--secondary"
+          href="https://www.google.com/maps/d/edit?mid=1lL3qdmf4UXi1P9cRLF7yjPcPuzd3kZs&amp;usp=sharing"
+          target="_blank"
+          rel="noopener"
+          >編輯地圖</a
+        >
+        <a class="btn btn--secondary" href="./assets/singapore-pois.kml" download="singapore-pois.kml"
+          >下載站內 KML（備份）</a
+        >
       </div>
-      <p id="raw-kml-hint" class="lead" style="margin-top: -0.25rem; font-size: 0.8rem"></p>
 
-      <div id="poi-map" role="region" aria-label="參考地點地圖"></div>
-      <p class="lead" style="margin-top: 0.65rem; font-size: 0.8rem">
-        底圖 © OpenStreetMap 貢獻者 · 座標為行程參考用，非即時路況。
-      </p>
+      <div class="my-maps-embed" aria-label="Google 我的地圖嵌入">
+        <iframe
+          title="新加坡飯店附近半日景點"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/d/embed?mid=1lL3qdmf4UXi1P9cRLF7yjPcPuzd3kZs&amp;hl=zh-TW"
+        ></iframe>
+      </div>
+
+      <div class="callout" style="margin-top: 1rem">
+        <strong>若 iframe 空白：</strong>請先確認已登入 Google，或改用「全畫面檢視」。地圖分享權限需為「知道連結的任何人」等可檢視設定，嵌入才會正常。
+      </div>
     </main>
 
     <footer class="site-footer">
       <p><a href="./singapore.html">返回新加坡自由行</a> · <a href="./index.html">首頁</a></p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.min.js" crossorigin="anonymous"></script>
-    <script>
-      (function () {
-        var pois = [
-          { name: "禧街鉑爾曼飯店", lat: 1.29104, lng: 103.84953 },
-          { name: "City Hall 地鐵站", lat: 1.2922, lng: 103.8516 },
-          { name: "樟宜機場（概略）", lat: 1.3612, lng: 103.9894 },
-          { name: "舊禧街警察局", lat: 1.2905, lng: 103.849 },
-          { name: "ION Orchard", lat: 1.304, lng: 103.832 },
-          { name: "武吉士 Bugis Junction", lat: 1.2985, lng: 103.8555 },
-          { name: "哈芝巷", lat: 1.3009, lng: 103.8597 },
-          { name: "魚尾獅公園", lat: 1.2869, lng: 103.8545 },
-          { name: "濱海灣金沙", lat: 1.2835, lng: 103.8607 },
-          { name: "螺旋橋", lat: 1.2872, lng: 103.8643 },
-          { name: "老巴剎", lat: 1.2804, lng: 103.851 },
-          { name: "克拉碼頭", lat: 1.29, lng: 103.8462 },
-          { name: "濱海灣花園擎天樹區", lat: 1.282, lng: 103.8633 },
-        ];
-
-        function pagesKmlUrl() {
-          return new URL("assets/singapore-pois.kml", window.location.href).href;
-        }
-
-        /** GitHub Pages：對應 raw.githubusercontent.com，方便「我的地圖」用網址匯入 */
-        function rawKmlUrlForImport() {
-          var m = location.hostname.match(/^([^.]+)\.github\.io$/);
-          if (!m) return pagesKmlUrl();
-          var user = m[1];
-          var parts = location.pathname.split("/").filter(Boolean);
-          var repo = parts[0];
-          if (!repo) return pagesKmlUrl();
-          return (
-            "https://raw.githubusercontent.com/" +
-            user +
-            "/" +
-            repo +
-            "/main/assets/singapore-pois.kml"
-          );
-        }
-
-        var dirPath = pois
-          .map(function (p) {
-            return p.lat + "," + p.lng;
-          })
-          .join("/");
-        document.getElementById("open-google-dir").href =
-          "https://www.google.com/maps/dir/" + dirPath;
-
-        var kmlPages = pagesKmlUrl();
-        document.getElementById("open-google-kml").href =
-          "https://www.google.com/maps?q=" + encodeURIComponent(kmlPages);
-
-        var raw = rawKmlUrlForImport();
-        var hint = document.getElementById("raw-kml-hint");
-        hint.innerHTML =
-          "「我的地圖」若支援以網址匯入，可貼：<code style=\"word-break: break-all\">" +
-          raw.replace(/</g, "&lt;") +
-          "</code>（<code>text/plain</code>，若失敗請改<strong>下載 KML</strong>後本機選檔匯入。）";
-
-        var map = L.map("poi-map", { scrollWheelZoom: false });
-        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-          maxZoom: 19,
-          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a>',
-        }).addTo(map);
-
-        var bounds = [];
-        pois.forEach(function (p) {
-          var m = L.marker([p.lat, p.lng]).addTo(map);
-          m.bindPopup("<strong>" + p.name + "</strong>");
-          bounds.push([p.lat, p.lng]);
-        });
-        map.fitBounds(bounds, { padding: [36, 36] });
-      })();
-    </script>
     <script src="./assets/register-sw.js" defer></script>
   </body>
 </html>
