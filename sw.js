@@ -1,5 +1,5 @@
 /* 輕量離線快取：靜態頁與樣式；更新時遞增 CACHE */
-const CACHE = "sg-trip-v2";
+const CACHE = "sg-trip-v3";
 const ASSETS = [
   "./index.html",
   "./singapore.html",
@@ -10,6 +10,7 @@ const ASSETS = [
   "./checklist.html",
   "./links.html",
   "./manifest.json",
+  "./.nojekyll",
   "./assets/app.css",
   "./assets/icon.svg",
   "./assets/singapore-pois.kml",
