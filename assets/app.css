@@ -381,7 +381,7 @@ table.simple th {
   font-weight: 600;
 }
 
-/* 地圖一覽頁（Leaflet） */
+/* 地圖頁（舊 Leaflet 備援樣式，若日後加回） */
 #poi-map {
   width: 100%;
   height: min(68vh, 560px);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2">
   <Document>
-    <name>新加坡自由行 · 參考地點</name>
+    <name>自由行 · 參考地點</name>
     <description>與 singapore.html 動線對應之參考座標（約略）；導航請以現場為準。</description>
     <Style id="poi"><IconStyle><scale>1.1</scale><Icon><href>https://maps.google.com/mapfiles/kml/paddle/blu-circle.png</href></Icon></IconStyle></Style>
 

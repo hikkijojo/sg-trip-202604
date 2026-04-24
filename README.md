@@ -7,8 +7,8 @@
 - **`content/trip.md`**：行程備忘與規劃草稿（**不**自動轉成網頁；網頁為獨立撰寫）。此檔已列入 **`.gitignore`，不會被推上 GitHub**，僅保留在本機。
 - **靜態網頁（手機優先、多頁）**
   - `index.html`：首屏 **班機／專車／飯店** 三卡＋其餘入口。
-  - `singapore.html`：**新加坡自由行** 詳頁（Google 地圖、維基圖片與延伸閱讀）。
-  - `map.html`：**地圖一覽**（嵌入 Google「我的地圖」`embed?mid=…`；站內 `singapore-pois.kml` 僅備份下載）。若更換地圖，請改 `map.html` 內之 `mid` 與連結。
+  - `singapore.html`：**自由行** 詳頁（Google 地圖、維基圖片與延伸閱讀）。
+  - `map.html`：**地圖**（嵌入 Google「我的地圖」`embed?mid=…`；站內 `singapore-pois.kml` 僅備份下載）。若更換地圖，請改 `map.html` 內之 `mid` 與連結。
   - **`.nojekyll`**：讓 GitHub Pages 以純靜態方式提供檔案（避免 Jekyll 處理）。
   - `order.html`、`timeline.html`、`cruise.html`、`checklist.html`、`links.html`：摘要頁。
 - **`assets/app.css`**：共用樣式。

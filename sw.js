@@ -1,5 +1,5 @@
 /* 輕量離線快取：靜態頁與樣式；更新時遞增 CACHE */
-const CACHE = "sg-trip-v4";
+const CACHE = "sg-trip-v5";
 const ASSETS = [
   "./index.html",
   "./singapore.html",
